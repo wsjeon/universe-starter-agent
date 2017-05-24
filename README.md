@@ -37,6 +37,7 @@ sudo apt-get install -y tmux htop cmake golang libjpeg-dev
 pip install gym[all]
 pip install universe
 pip install six
+pip install go_vncdriver
 
 conda install -y -c https://conda.binstar.org/menpo opencv3
 conda install -y numpy
