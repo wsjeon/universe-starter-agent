@@ -34,7 +34,7 @@ pip install --ignore-installed --upgrade \
 ```
 sudo apt-get install -y tmux htop cmake golang libjpeg-dev
 
-pip install gym[all]
+pip install "gym[atari]"
 pip install universe
 pip install six
 pip install go_vncdriver
