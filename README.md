@@ -14,9 +14,9 @@
 * [tmux](https://tmux.github.io/) (the start script opens up a tmux session with multiple windows)
 * [htop](https://hisham.hm/htop/) (shown in one of the tmux windows)
 * gym
-* libjpeg-turbo (`brew install libjpeg-turbo`)
-* [universe](https://pypi.python.org/pypi/universe)
-* [opencv-python](https://pypi.python.org/pypi/opencv-python)
+* libjpeg-turbo (`brew install libjpeg-turbo`) (Maybe not required for Atari.)
+* [universe](https://pypi.python.org/pypi/universe) (Maybe not required for Atari.)
+* [opencv-python](https://pypi.python.org/pypi/opencv-python) (Maybe not required for Atari.)
 * [numpy](https://pypi.python.org/pypi/numpy)
 * [scipy](https://pypi.python.org/pypi/scipy)
 
