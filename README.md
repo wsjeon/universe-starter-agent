@@ -4,7 +4,7 @@
 * This repository modifies some codes in the original repository and add some modules.  
 * [A3C Paper](https://arxiv.org/abs/1602.01783)
 
-# Dependencies
+# Dependencies (May 24, 2017)
 
 * Ubuntu 16.04
 * Python 2.7
