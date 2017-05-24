@@ -39,9 +39,10 @@ conda install -y numpy
 conda install -y scipy
 ```
 
-
-Add the following to your `.bashrc` so that you'll have the correct environment when the `train.py` script spawns new bash shells
-```source activate universe-starter-agent```
+* Add the following to your `.bashrc` so that you'll have the correct environment when the `train.py` script spawns new bash shells:
+```
+source activate tensorflow3
+```
 
 ## Atari Pong
 
