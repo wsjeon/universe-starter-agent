@@ -1,10 +1,12 @@
-# universe-starter-agent
+# A3C implementation on TensorFlow
 
-The codebase implements a starter agent that can solve a number of `universe` environments.
-It contains a basic implementation of the [A3C algorithm](https://arxiv.org/abs/1602.01783), adapted for real-time environments.
+* The original code was in [universe-starter-agent](https://github.com/openai/universe-starter-agent).
+* This code rewrites the original code and add some modules. 
+* [Paper](https://arxiv.org/abs/1602.01783), adapted for real-time environments.
 
 # Dependencies
 
+* Ubuntu 16.04
 * Python 3.5
 * [Golang](https://golang.org/doc/install)
 * [six](https://pypi.python.org/pypi/six) (for py2/3 compatibility)
@@ -21,6 +23,7 @@ It contains a basic implementation of the [A3C algorithm](https://arxiv.org/abs/
 
 # Getting Started
 
+* Full installation is given in the following commands. You must see the original repository [universe-starter-agent](https://github.com/openai/universe-starter-agent).
 ```
 conda create --name tensorflow3 python=3.5
 source activate tensorflow3
