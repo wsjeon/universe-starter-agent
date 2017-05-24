@@ -25,7 +25,7 @@ It contains a basic implementation of the [A3C algorithm](https://arxiv.org/abs/
 conda create --name tensorflow3 python=3.5
 source activate tensorflow3
 
-brew install tmux htop cmake golang libjpeg-turbo      # On Linux use sudo apt-get install -y tmux htop cmake golang libjpeg-dev
+sudo apt-get install -y tmux htop cmake golang libjpeg-dev
 
 pip install "gym[atari]"
 pip install universe
