@@ -7,7 +7,8 @@
 # Dependencies (May 24, 2017)
 
 * Ubuntu 16.04
-* Python 2.7
+* Anaconda3-4.3.1
+* Python 3.6
 * [Golang](https://golang.org/doc/install)
 * [six](https://pypi.python.org/pypi/six) (for py2/3 compatibility)
 * [TensorFlow](https://www.tensorflow.org/) 1.1 (GPU version)
@@ -23,11 +24,10 @@
 # Getting Started
 * Install TensorFlow by using Anaconda.
 ```
-conda create -n tensorflow python=2.7
+conda create -n tensorflow
 source activate tensorflow
-pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.1.0-cp27-none-linux_x86_64.whl
-# If [Permission denied error], 
-sudo env PATH=$PATH pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.1.0-cp27-none-linux_x86_64.whl
+pip install --ignore-installed --upgrade \
+> https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.1.0-cp36-cp36m-linux_x86_64.whl
 ```
 
 * Install dependencies. (I recommand you to see [original repository](https://github.com/openai/universe-starter-agent).)
