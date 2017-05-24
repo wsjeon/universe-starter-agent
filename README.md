@@ -8,7 +8,7 @@
 
 * Ubuntu 16.04
 * Anaconda3-4.3.1
-* Python 3.6
+* Python 3.5
 * [Golang](https://golang.org/doc/install)
 * [six](https://pypi.python.org/pypi/six) (for py2/3 compatibility)
 * [TensorFlow](https://www.tensorflow.org/) 1.1 (GPU version)
