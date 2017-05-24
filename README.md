@@ -1,7 +1,7 @@
 # A3C implementation on TensorFlow
 
-* The original code was in [universe-starter-agent](https://github.com/openai/universe-starter-agent).
-* This code rewrites the original code and add some modules. 
+* The original code was in [this repository](https://github.com/openai/universe-starter-agent).
+* This repository modifies some codes in the original repository and add some modules.  
 * [Paper](https://arxiv.org/abs/1602.01783), adapted for real-time environments.
 
 # Dependencies
