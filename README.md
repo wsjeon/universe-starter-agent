@@ -25,7 +25,7 @@
 * Full installation is given in the following commands. You must see the [original repository](https://github.com/openai/universe-starter-agent).
 ```
 conda create -n tensorflow python=2.7
-source activate tensorflow3
+source activate tensorflow
 
 sudo apt-get install -y tmux htop cmake golang libjpeg-dev
 
@@ -40,7 +40,7 @@ conda install -y scipy
 
 * Add the following to your `.bashrc` so that you'll have the correct environment when the `train.py` script spawns new bash shells:
 ```
-source activate tensorflow3
+source activate tensorflow
 ```
 
 ## Atari Pong
