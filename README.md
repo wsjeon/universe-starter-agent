@@ -32,7 +32,7 @@ sudo apt-get install -y tmux htop cmake golang libjpeg-dev
 pip install gym[all]
 pip install universe
 pip install six
-pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.1.0-cp27-none-linux_x86_64.whl
+sudo env PATH=$PATH pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.1.0-cp27-none-linux_x86_64.whl
 conda install -y -c https://conda.binstar.org/menpo opencv3
 conda install -y numpy
 conda install -y scipy
