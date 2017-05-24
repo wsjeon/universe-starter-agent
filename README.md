@@ -13,8 +13,7 @@
 * [TensorFlow](https://www.tensorflow.org/) 0.12
 * [tmux](https://tmux.github.io/) (the start script opens up a tmux session with multiple windows)
 * [htop](https://hisham.hm/htop/) (shown in one of the tmux windows)
-* [gym](https://pypi.python.org/pypi/gym)
-* gym[atari]
+* gym[all]
 * libjpeg-turbo (`brew install libjpeg-turbo`)
 * [universe](https://pypi.python.org/pypi/universe)
 * [opencv-python](https://pypi.python.org/pypi/opencv-python)
