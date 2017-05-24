@@ -27,7 +27,7 @@ source activate tensorflow3
 
 sudo apt-get install -y tmux htop cmake golang libjpeg-dev
 
-pip install "gym[atari]"
+pip install gym[all]
 pip install universe
 pip install six
 pip install tensorflow
