@@ -5,7 +5,7 @@ It contains a basic implementation of the [A3C algorithm](https://arxiv.org/abs/
 
 # Dependencies
 
-* Python 2.7 or 3.5
+* Python 3.5
 * [Golang](https://golang.org/doc/install)
 * [six](https://pypi.python.org/pypi/six) (for py2/3 compatibility)
 * [TensorFlow](https://www.tensorflow.org/) 0.12
@@ -22,7 +22,7 @@ It contains a basic implementation of the [A3C algorithm](https://arxiv.org/abs/
 # Getting Started
 
 ```
-conda create --name universe-starter-agent python=3.5
+conda create --name tensorflow3 python=3.5
 source activate universe-starter-agent
 
 brew install tmux htop cmake golang libjpeg-turbo      # On Linux use sudo apt-get install -y tmux htop cmake golang libjpeg-dev
