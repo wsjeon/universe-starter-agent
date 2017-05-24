@@ -49,7 +49,7 @@ conda install -y scipy
 source activate tensorflow
 ```
 
-## Atari Pong
+# How to run
 ```
 python train.py --num-workers 16 --env-id PongDeterministic-v3 --log-dir ./tmp/pong
 ```
