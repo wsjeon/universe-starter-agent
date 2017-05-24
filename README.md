@@ -50,7 +50,7 @@ source activate tensorflow
 
 ## Atari Pong
 
-`python train.py --num-workers 2 --env-id PongDeterministic-v3 --log-dir /tmp/pong`
+`python train.py --num-workers 2 --env-id PongDeterministic-v3 --log-dir ./tmp/pong`
 
 The command above will train an agent on Atari Pong using ALE simulator.
 It will see two workers that will be learning in parallel (`--num-workers` flag) and will output intermediate results into given directory.
