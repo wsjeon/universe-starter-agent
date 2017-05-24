@@ -21,18 +21,23 @@
 * [scipy](https://pypi.python.org/pypi/scipy)
 
 # Getting Started
-
-* Full installation is given in the following commands. You must see the [original repository](https://github.com/openai/universe-starter-agent).
+* Install TensorFlow by using Anaconda.
 ```
 conda create -n tensorflow python=2.7
 source activate tensorflow
+pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.1.0-cp27-none-linux_x86_64.whl
+# If [Permission denied error], 
+sudo env PATH=$PATH pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.1.0-cp27-none-linux_x86_64.whl
+```
 
+* Install dependencies. (I recommand you to see [original repository](https://github.com/openai/universe-starter-agent).)
+```
 sudo apt-get install -y tmux htop cmake golang libjpeg-dev
 
 pip install gym[all]
 pip install universe
 pip install six
-sudo env PATH=$PATH pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.1.0-cp27-none-linux_x86_64.whl
+
 conda install -y -c https://conda.binstar.org/menpo opencv3
 conda install -y numpy
 conda install -y scipy
