@@ -5,7 +5,7 @@ from six.moves import shlex_quote
 
 parser = argparse.ArgumentParser(description="Run commands")
 parser.add_argument('-w', '--num-workers',
-                    default=1,
+                    default=16,
                     type=int,
                     help="Number of workers")
 parser.add_argument('-r', '--remotes',

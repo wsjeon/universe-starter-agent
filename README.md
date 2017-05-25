@@ -77,6 +77,6 @@ Add '--visualise' toggle if you want to visualise the worker using env.render() 
 
 ![pong](https://github.com/openai/universe-starter-agent/raw/master/imgs/tb_pong.png "Pong")
 
-For best performance, it is recommended for the number of workers to not exceed available number of CPU cores.
+For best performance, it is recommended for the number of workers to not exceed available number of CPU cores by using `lscpu`.
 
 You can stop the experiment with `tmux kill-session` command.
