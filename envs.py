@@ -70,10 +70,14 @@ def create_vncatari_env(env_id, client_id, remotes, **_):
     env.configure(remotes=remotes, start_timeout=15 * 60, fps=fps, client_id=client_id)
     return env
 
-def create_atari_env(env_id):
+def create_atari_env(env_id, frame_size=84):
     env = gym.make(env_id)
     env = Vectorize(env)
-    env = AtariRescale42x42(env)
+    if frame_size == 42:
+        env = AtariRescale42x42(env)
+    else:
+        # Preprocess frames followed from DQN 2013.
+        env = AtariRescale84x84(env)
     env = DiagnosticsInfo(env)
     env = Unvectorize(env)
     return env
@@ -166,6 +170,7 @@ class DiagnosticsInfoI(vectorized.Filter):
         return observation, reward, done, to_log
 
 def _process_frame42(frame):
+    import ipdb; ipdb.set_trace()
     frame = frame[34:34+160, :160]
     # Resize by half, then down to 42x42 (essentially mipmapping). If
     # we resize directly we lose pixels that, when mapped to 42x42,
@@ -178,6 +183,33 @@ def _process_frame42(frame):
     frame = np.reshape(frame, [42, 42, 1])
     return frame
 
+def _process_frame84(frame):
+    """Preprocess frames.
+
+    Parameters
+    ----------
+    frame : 210x160x3 RGB frame
+
+    Returns
+    -------
+    frame : 84x84 preprocessed frame
+
+    """
+    # Convert RGB representation to gray scaling.
+    frame = np.dot(frame[...,:3], [0.299, 0.587, 0.114])
+
+    # Downsample frame to a 110x84 image.
+    frame = cv2.resize(frame, (84, 110))
+
+    # Crop frame to a 84x84 image.
+    frame = frame[18:102, :]
+
+    # Normalize adnd reshape frame.
+    frame = frame.astype(np.float32)
+    frame *= (1.0 / 255.0)
+    frame = np.reshape(frame, [84, 84, 1])
+    return frame
+
 class AtariRescale42x42(vectorized.ObservationWrapper):
     def __init__(self, env=None):
         super(AtariRescale42x42, self).__init__(env)
@@ -185,6 +217,14 @@ class AtariRescale42x42(vectorized.ObservationWrapper):
 
     def _observation(self, observation_n):
         return [_process_frame42(observation) for observation in observation_n]
+
+class AtariRescale84x84(vectorized.ObservationWrapper):
+    def __init__(self, env=None):
+        super(AtariRescale84x84, self).__init__(env)
+        self.observation_space = Box(0.0, 1.0, [84, 84, 1])
+
+    def _observation(self, observation_n):
+        return [_process_frame84(observation) for observation in observation_n]
 
 class FixedKeyState(object):
     def __init__(self, keys):
