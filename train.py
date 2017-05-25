@@ -4,22 +4,33 @@ import sys
 from six.moves import shlex_quote
 
 parser = argparse.ArgumentParser(description="Run commands")
-parser.add_argument('-w', '--num-workers', default=1, type=int,
+parser.add_argument('-w', '--num-workers',
+                    default=1,
+                    type=int,
                     help="Number of workers")
-parser.add_argument('-r', '--remotes', default=None,
+parser.add_argument('-r', '--remotes',
+                    default=None,
                     help='The address of pre-existing VNC servers and '
                          'rewarders to use (e.g. -r vnc://localhost:5900+15900,vnc://localhost:5901+15901).')
-parser.add_argument('-e', '--env-id', type=str, default="PongDeterministic-v3",
+parser.add_argument('-e', '--env-id',
+                    type=str,
+                    default="PongDeterministic-v3",
                     help="Environment id")
-parser.add_argument('-l', '--log-dir', type=str, default="/tmp/pong",
+parser.add_argument('-l', '--log-dir',
+                    type=str,
+                    default="./tmp/pong",
                     help="Log directory path")
-parser.add_argument('-n', '--dry-run', action='store_true',
+parser.add_argument('-n', '--dry-run',
+                    action='store_true',
                     help="Print out commands rather than executing them")
-parser.add_argument('-m', '--mode', type=str, default='tmux',
+parser.add_argument('-m', '--mode',
+                    type=str,
+                    default='tmux',
                     help="tmux: run workers in a tmux session. nohup: run workers with nohup. child: run workers as child processes")
 
 # Add visualise tag
-parser.add_argument('--visualise', action='store_true',
+parser.add_argument('--visualise',
+                    action='store_true',
                     help="Visualise the gym environment by running env.render() between each timestep")
 
 
@@ -106,6 +117,7 @@ def run():
     if not args.dry_run:
         if args.mode == "tmux":
             os.environ["TMUX"] = ""
+        # import ipdb; ipdb.set_trace(); print(cmds)
         os.system("\n".join(cmds))
     print('\n'.join(notes))
 
